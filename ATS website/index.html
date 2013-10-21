@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Academic Credit Points</title>
-	<link rel="stylesheet" media="screen" href="styles.css" >
-	<link href="jquery-ui.css" rel="stylesheet" type="text/css" />
-	<script src="jquery-1.9.1.js"></script>
-	<script src="jquery-ui.js"></script>
+        <meta charset="utf-8">
+        <title>Academic Credit Points</title>
+        <link rel="stylesheet" media="screen" href="styles.css" >
+        <link href="jquery-ui.css" rel="stylesheet" type="text/css" />
+        <script src="jquery-1.9.1.js"></script>
+        <script src="jquery-ui.js"></script>
+				
+		<link rel="stylesheet" type="text/css" href="jquery.ptTimeSelect.css" />
+		<script type="text/javascript" src="jquery.ptTimeSelect.js"></script>
+		
+        <script>
+          $(function() {
+                $( "#datepicker" ).datepicker();
+          });
+        </script>
+		
+		<script>
+        $(document).ready(function(){
+            $( "#timepicker").ptTimeSelect();
+        });
+		</script>
 	
-	<script>
-	  $(function() {
-		$( "#datepicker" ).datepicker();
-	  });
-	</script>
+		<script>
+        $(document).ready(function(){
+            $( "#timepicker1").ptTimeSelect();
+        });
+		</script>
 </head>
 <body>
 
@@ -126,22 +141,21 @@
          <fieldset>
         <legend>Program</legend>
          <li>
-            <label for="drp_type">Program Type:</label>
-          <div class="styled-select"> <select>
-  <option value="#">------Select Type------</option>
-   <option value="Degree">Degree</option>
-  <option value="Non-Degree">Non-Degree</option>
-  <option value="Faculty Development">Faculty Development</option>
-  <option value="Staff Development">Staff Development</option>
-  <option value="Research ">Research </option>
-  <option value="Forums/Conferences.">Forums/Conferences.</option>
-
-</select>
-              </div>
-        </li>
-         <li>
             <label for="lbl_progname">Program Name:</label>
             <input type="text" name="in_prog" placeholder="Program" required />
+        </li>
+		 <li>
+            <label for="drp_type">Program Type:</label>
+        <div class="styled-select"> <select>
+			  <option value="#">------Select Type------</option>
+			  <option value="Degree">Degree</option>
+			  <option value="Non-Degree">Non-Degree</option>
+			  <option value="Faculty Development">Faculty Development</option>
+			  <option value="Staff Development">Staff Development</option>
+			  <option value="Research ">Research </option>
+			  <option value="Forums/Conferences.">Forums/Conferences.</option>
+		</select>
+        </div>
         </li>
          <li>
             <label for="name">Batch:</label>
@@ -183,38 +197,38 @@
             <input type="text" id="datepicker" name="in_date">
         </li>
          <li>
-            <label for="name">Time:</label>
-            <input type="text"  placeholder="....." required />
-            <input id="exit-time" name="exit-time" type="time">
+            <label for="name">Start Time:</label>
+            <input type="text" id="timepicker" placeholder="....." required />
+			<label for="name">End Time:</label>
+            <input type="text" id="timepicker1" placeholder="....." required />
         </li>
         </fieldset>
          <fieldset>
         <legend>ATS</legend>
-         <li>
-            <label for="name">ATS Required:</label>
-            <input type="text"  name="in_atsr" placeholder="....." required />
-        </li>
-         <li>
+		<li>
             <label for="name">ATS Aquired:</label>
             <input type="text" name="in_atsa" placeholder="....." required />
         </li>
-        </fieldset>
-       
+         <li>
+            <label for="name">ATS Required:</label>
+            <input type="text"  name="in_atsr" placeholder="....."  />
+        </li>
+        </fieldset>       
          <fieldset>
         <legend>Summary</legend>
          <li>
             <label for="name">Materials Used:</label>
-            <input type="text"  placeholder="....." required />
+            <input type="text" placeholder="....." />
         </li>
-         <li>
+         <li> 
             <label for="name">Remarks:</label>
-            <input type="text"  placeholder="....." required />
+            <input type="text" placeholder="....." />
         </li>
         </fieldset>
         
         
         <li>
-        	<button class="submit" type="submit" data-text="Checking Data..">Submit Form</button>
+                <button class="submit" type="submit" data-text="Checking Data..">Submit Form</button>
         </li>
     </ul>
     </div>
