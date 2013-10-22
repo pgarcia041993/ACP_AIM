@@ -1,15 +1,7 @@
 /* === Remove input autofocus webkit === */
 *:focus {outline: none;}
 html {
-	background: rgb(233,246,253); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(233,246,253,1) 0%, rgba(211,238,251,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(233,246,253,1)), color-stop(100%,rgba(211,238,251,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(233,246,253,1) 0%,rgba(211,238,251,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(233,246,253,1) 0%,rgba(211,238,251,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(233,246,253,1) 0%,rgba(211,238,251,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(233,246,253,1) 0%,rgba(211,238,251,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f6fd', endColorstr='#d3eefb',GradientType=0 ); /* IE6-9 */
-	
+	background: #fff url(images/bg.jpg) repeat top left;
 }
 /* === Form Typography === */
 body {font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif; }
@@ -27,19 +19,7 @@ width:70%;
     list-style-type:none;
 	list-style-position:outside;
 	border-radius: 15px ;
-	/* IE10 Consumer Preview */ 
-	background-image: -ms-linear-gradient(left, #FFFFFF 0%, #D1E3D8 100%);
-	/* Mozilla Firefox */ 
-	background-image: -moz-linear-gradient(left, #FFFFFF 0%, #D1E3D8 100%);
-	/* Opera */ 
-	background-image: -o-linear-gradient(left, #FFFFFF 0%, #D1E3D8 100%);
-	/* Webkit (Safari/Chrome 10) */ 
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #FFFFFF), color-stop(1, #D1E3D8));
-	/* Webkit (Chrome 11+) */ 
-	background-image: -webkit-linear-gradient(left, #FFFFFF 0%, #D1E3D8 100%);
-	/* W3C Markup, IE10 Release Preview */ 
-	background-image: linear-gradient(to right, #FFFFFF 0%, #D1E3D8 100%);
-
+	background: rgb(247, 247, 247);
 	width:400px;
 	margin:0 auto 0 auto;
 	padding:5px;
@@ -143,30 +123,32 @@ width:70%;
 	
 /* === Button Style === */
 button.submit {
-	background-color: #68b12f;
-	background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
-	background: -webkit-linear-gradient(top, #68b12f, #50911e);
-	background: -moz-linear-gradient(top, #68b12f, #50911e);
-	background: -ms-linear-gradient(top, #68b12f, #50911e);
-	background: -o-linear-gradient(top, #68b12f, #50911e);
-	background: linear-gradient(top, #68b12f, #50911e);
-	border: 1px solid #509111;
-	border-bottom: 1px solid #5b992b;
-	border-radius: 3px;
+	width: 30%;
+	cursor: pointer;	
+	background: rgb(61, 157, 179);
+	padding: 8px 5px;
+	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+	color: #fff;
+	font-size: 18px;	
+	border: 1px solid rgb(28, 108, 122);	
+	margin-bottom: 10px;	
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
-	box-shadow: inset 0 1px 0 0 #9fd574;
-	-webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
-	-moz-box-shadow: 0 1px 0 0 #9fd574 inset;
-	-ms-box-shadow: 0 1px 0 0 #9fd574 inset;
-	-o-box-shadow: 0 1px 0 0 #9fd574 inset;
-	color: white;
-	font-weight: bold;
-	padding: 6px 20px;
-	text-align: center;
-	text-shadow: 0 -1px 0 #396715;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;	
+	-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+	        0px 0px 0px 3px rgb(254, 254, 254),
+	        0px 5px 3px 3px rgb(210, 210, 210);
+	   -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+	        0px 0px 0px 3px rgb(254, 254, 254),
+	        0px 5px 3px 3px rgb(210, 210, 210);
+	        box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+	        0px 0px 0px 3px rgb(254, 254, 254),
+	        0px 5px 3px 3px rgb(210, 210, 210);
+	-webkit-transition: all 0.2s linear;
+	   -moz-transition: all 0.2s linear;
+	     -o-transition: all 0.2s linear;
+	        transition: all 0.2s linear;
 }
 button.submit:hover {
 	opacity:.85;

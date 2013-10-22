@@ -3,13 +3,12 @@
 <head>
         <meta charset="utf-8">
         <title>Academic Credit Points</title>
-        <link rel="stylesheet" media="screen" href="styles.css" >
-        <link href="jquery-ui.css" rel="stylesheet" type="text/css" />
-        <script src="jquery-1.9.1.js"></script>
-        <script src="jquery-ui.js"></script>
-				
-		<link rel="stylesheet" type="text/css" href="jquery.ptTimeSelect.css" />
-		<script type="text/javascript" src="jquery.ptTimeSelect.js"></script>
+        <link rel="stylesheet" media="screen" href="css/styles.css" >
+        <link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery-1.9.1.js"></script>
+        <script src="js/jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/jquery.ptTimeSelect.css" />
+		<script type="text/javascript" src="js/jquery.ptTimeSelect.js"></script>
 		
         <script>
           $(function() {
@@ -119,7 +118,7 @@
   <option value="Torio, Philamer">
   <option value="Parshar">
   </datalist>
-<form class="contact_form" action="#" method="post" name="contact_form">
+<form class="contact_form" action="process.php" method="post" name="contact_form">
     <div class="main">
     <ul>
         <li>
@@ -131,22 +130,22 @@
         
         <li>
             <label for="lbl_name">Faculty Name:</label>
-            <input list="faculty_list" name="fac_name"  placeholder="Rodolfo, Romulo" required />
+            <input list="faculty_list" id="facultyname" name="facultyname"  placeholder="Rodolfo, Romulo" required />
         </li>
          <li>
             <label for="lbl_core">Faculty Category</label>
-            <input type="text" name="core"  placeholder="Core/Adjunc" required />
+            <input type="text" name="facultycategory" id="facultycategory" placeholder="Core/Adjunc" required />
         </li>
         </fieldset>
          <fieldset>
         <legend>Program</legend>
          <li>
             <label for="lbl_progname">Program Name:</label>
-            <input type="text" name="in_prog" placeholder="Program" required />
+            <input type="text" name="programname" id="programname" placeholder="Program" required />
         </li>
 		 <li>
             <label for="drp_type">Program Type:</label>
-        <div class="styled-select"> <select>
+        <div class="styled-select"> <select name="programtype"
 			  <option value="#">------Select Type------</option>
 			  <option value="Degree">Degree</option>
 			  <option value="Non-Degree">Non-Degree</option>
@@ -159,76 +158,74 @@
         </li>
          <li>
             <label for="name">Batch:</label>
-            <input type="text" name="in_batch" placeholder="Cohort...." required />
+            <input type="text" name="batch" id="facultyname" placeholder="Cohort...." required />
         </li>
          <li>
             <label for="name">School/Center:</label>
-            <div class="styled-select" name="in_center"> <select>
+            <div class="styled-select" name="in_center"> <select name="schoolcenter">
   <option value="#">------Select Type------</option>
  
 </select></div>
         </li>
          <li>
             <label for="lbl_ctype">Course Type:</label>
-            <input type="text" name="in_ctype" placeholder="....." required />
+            <input type="text" name="coursetype" placeholder="....." required />
         </li>
          <li>
             <label for="lbl_cname">Course Name:</label>
-            <input type="text" name="in_cname"  placeholder="....." required />
+            <input type="text" name="coursename" placeholder="....." required />
         </li>
          <li>
             <label for="lbl_term">Module/Term Week:</label>
-            <input type="text" name="in_term" placeholder="....." required />
+            <input type="text" name="module" placeholder="....." required />
         </li>
          <li>
             <label for="lbl_topic">Topic:</label>
-            <input type="text" name="in_topic" placeholder="....." required />
+            <input type="text" name="topic" placeholder="....." required />
         </li>
          <li>
             <label for="lbl_units">Units:</label>
-            <input type="text" name="in_units" placeholder="....." required />
+            <input type="text" name="units" placeholder="....." required />
         </li>
          <li>
             <label for="lbl_participants">No. of Participants:</label>
-            <input type="text" name="in_partici" placeholder="....." required />
+            <input type="text" name="noofparticipants" placeholder="....." required />
         </li>
          <li>
             <label for="name">Date:</label>
-            <input type="text" id="datepicker" name="in_date">
+            <input type="text" id="datepicker" name="date" name="in_date">
         </li>
          <li>
             <label for="name">Start Time:</label>
-            <input type="text" id="timepicker" placeholder="....." required />
+            <input type="text" id="timepicker" name="starttime" placeholder="....." required />
 			<label for="name">End Time:</label>
-            <input type="text" id="timepicker1" placeholder="....." required />
+            <input type="text" id="timepicker1" name="endtime" placeholder="....." required />
         </li>
         </fieldset>
          <fieldset>
         <legend>ATS</legend>
 		<li>
             <label for="name">ATS Aquired:</label>
-            <input type="text" name="in_atsa" placeholder="....." required />
+            <input type="text"  name="atsaquired" placeholder="....." required />
         </li>
          <li>
             <label for="name">ATS Required:</label>
-            <input type="text"  name="in_atsr" placeholder="....."  />
+            <input type="text" name="atsrequired" placeholder="....."  />
         </li>
         </fieldset>       
          <fieldset>
         <legend>Summary</legend>
          <li>
             <label for="name">Materials Used:</label>
-            <input type="text" placeholder="....." />
+            <input type="text" name="materilasused" placeholder="....." />
         </li>
          <li> 
             <label for="name">Remarks:</label>
-            <input type="text" placeholder="....." />
+            <input type="text" name="remarks" placeholder="....." />
         </li>
         </fieldset>
-        
-        
         <li>
-                <button class="submit" type="submit" data-text="Checking Data..">Submit Form</button>
+             <button class="submit" type="submit" data-text="Checking Data..">Submit Form</button>
         </li>
     </ul>
     </div>
